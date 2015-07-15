@@ -1,0 +1,29 @@
+{
+  "name": "system-jade-virtualdom",
+  "version": "1.0.0",
+  "description": "ES6/System.JS loader for jade-virtualdom",
+  "main": "loader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WorldMaker/system-jade-virtualdom.git"
+  },
+  "author": "Max Battcher <me@worldmaker.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WorldMaker/system-jade-virtualdom/issues"
+  },
+  "homepage": "https://github.com/WorldMaker/system-jade-virtualdom",
+  "format": "es6",
+  "registry": "jspm",
+  "dependencies": {
+    "jade-virtualdom": "npm:jade-virtualdom@^0.0.5"
+  },
+  "devDependencies": {
+    "babel": "npm:babel-core@^5.1.13",
+    "babel-runtime": "npm:babel-runtime@^5.1.13",
+    "core-js": "npm:core-js@^0.9.4"
+  }
+}
