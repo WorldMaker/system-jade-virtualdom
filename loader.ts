@@ -4,14 +4,14 @@ interface ModuleSource {
 }
 
 declare module System {
-	export function normalize(name: string): string;
+	export function normalize(name: string): Promise<string>;
 }
 
-let jadeVirtualdomPath = System.normalize('jade-virtualdom');
+let normalPromise = System.normalize('jade-virtualdom');
 
 export function translate(load: ModuleSource) {
-	return `
+	return normalPromise.then(jadeVirtualdomPath => `
 		import jadeVirtualdom from '${jadeVirtualdomPath}';
 		export default let template = jadeVirtualdom(${JSON.stringify(load.source)});
-	`;
+	`);
 }
